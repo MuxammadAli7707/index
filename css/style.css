@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 *,
 *::after,
 *::before {
@@ -6,14 +8,322 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #fff;
+  background-color: var(--background-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Poppins', sans-serif;
 }
 
+:root {
+  --hero-back: #fff;
+  --logo-color: #173a56;
+  --primary-color: #22343d;
+  --btn-bck-color: #02897a;
+  --background-color: #fff;
+  --icon-color: #000;
+  --back-color: #fff;
+  --border: #efefef;
+  --up-back: #22343d;
+  --up-color: #fff;
+  --background-image: url(../imgs/Bg.svg); 
+  --back-image: url(../imgs/baccc.svg);
+}
 
-p {
-  color: red;
+.dark {
+  --background-color: #1f2e35;
+  --back-color: #1f2e35;
+  --hero-back: #29353b;
+  --primary-color: #fff;
+  --logo-color: #fff;
+  --icon-color: #fff;
+  --border: none;
+  --up-back: #fff;
+  --up-color: #22343d;
+  --background-image: url(../imgs/Bg\ \(1\).svg);
+  --back-image: url(../imgs/baccc2.svg);
+
+}
+
+#great {
+    margin-top: 74px;
+}
+
+.great__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 149%;
+    letter-spacing: -0.03em;
+    color: var(--primary-color);
+    width: 380px;
+    margin-bottom: 24px;
+}
+
+.great__text {
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: -0.03em;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    width: 535px;
+}
+.great__form {
+    width: 470px;
+    height: 66px;
+    border: 1px solid #eaeaea;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    padding-left: 27px;
+    padding-right: 8px;
+}
+
+.great__email {
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: none;
+}
+.great__email:focus {
+    outline: none;
+}
+.great__email::placeholder {
+    color: var(--primary-color);
+}
+.great__link {
+    padding: 16px 24px;
+    border-radius: 100px;
+    background-color: var(--btn-bck-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.great__imgs {
+    margin-right: 9px;
+}
+.great__sub {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--primary-color);
+}
+.great__num {
+    color: #02897a;
+}
+
+.great__imgbox {
+    content: '';
+    display: inline-block;
+    background-image: url(../imgs/Group\ 1452.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 541px;
+    height: 482px;
+}
+
+#great {
+    margin-bottom: 66px;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 85%;
+    }
+    .great__box {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .great__imgbox {
+        content: '';
+        display: inline-block;
+        background-image: url(../imgs/SCREEN\ MASK.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 359px;
+        height: 263px;
+        object-fit: cover;
+    }
+    
+    .great__user {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .great__imgbox {
+        height: 180px;
+    }
+    .great__title {
+        width: 100%;
+        text-align: center;
+        margin:  0 auto;
+        padding-bottom: 16px;
+    }
+    .great__text {
+        width: 353px;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 19px;
+    }
+    .great__form {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        padding-left: 20px;
+    }
+
+    .great__user {
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+}
+ 
+.contents__item {
+    margin-bottom: 32px;
+}
+
+.contents__linkbox {
+    margin: 0 auto;
+}
+
+.contents__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.contact__title {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: var(--primary-color);
+    margin-bottom: 27px;
+}
+.contact__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--primary-color);
+    letter-spacing: 0.2px;
+    width: 312px;
+    margin: 0 auto;
+}
+
+.contact__box {
+    margin-bottom: 65px;
+}
+
+.footer__icons {
+    margin-bottom: 65px;
+}
+.map__box {
+    margin-bottom: 50px;
+}
+.contact__map {
+    width: 871px;
+    height: 343px;
+}
+
+.contact__form {
+    background-color: var(--hero-back);
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 868px;
+    margin: 0 auto;
+    padding: 52px 50px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.form__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--primary-color);
+    letter-spacing: 0.1px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+.form__text {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    border-radius: 39px;
+    padding: 19px 0;
+    padding-left: 20px;
+    margin-bottom: 45px;
+}
+.form__text:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-size: 15px;
+    line-height: 16px;
+    color: #22343d;
+    letter-spacing: 0.1px;
+}
+.form__email {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    border-radius: 39px;
+    padding: 19px 0;
+    padding-left: 20px;
+    margin-bottom: 45px;
+}
+.form__email:focus {
+    outline: none;
+}
+.form__message {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    padding-top: 23px;
+    padding-left: 20px;
+    padding-bottom: 154px;
+    margin-bottom: 45px;
+}
+.form__message:focus {
+    outline: none;
+}
+.form__btn {
+    width: 145px;
+    height: 52px;
+    text-decoration: none;
+    padding: 18px 54px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.2px;  
+    color: #fff;
+    background: #02897a;
+    border-radius: 35px;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .contact__form {
+        width: 100%;
+        padding: 0;
+        border: none;
+    }
+
+    .contact__text {
+        width: 100%;
+    }
+}
+
+#contact {
+    margin-bottom: 150px;
 }
